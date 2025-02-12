@@ -21,5 +21,7 @@ python-decouple==3.8
 requests==2.32.3
 rsa==4.9
 sqlparse==0.5.3
-tzdata==2025.1
 urllib3==2.3.0
+tzdata==2025.1
+
+
