@@ -17,7 +17,7 @@ from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = str(BASE_DIR / 'vision_app/credentials/poc-pictionary-e2f4925bcba0.json')
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -28,8 +28,9 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = config('GOOGLE_APPLICATION_CREDENTIALS')
+GOOGLE_APPLICATION_CREDENTIALS_PATH = BASE_DIR / config('GOOGLE_APPLICATION_CREDENTIALS')
 
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = str( GOOGLE_APPLICATION_CREDENTIALS_PATH)
 
 ALLOWED_HOSTS = []
 
