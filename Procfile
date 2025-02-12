@@ -1,0 +1,1 @@
+web: gunicorn vision_poc.wsgi
