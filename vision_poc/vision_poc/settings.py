@@ -30,8 +30,14 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 GOOGLE_APPLICATION_CREDENTIALS_PATH = BASE_DIR / config('GOOGLE_APPLICATION_CREDENTIALS')
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = str(GOOGLE_APPLICATION_CREDENTIALS_PATH)
-
+# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = str(GOOGLE_APPLICATION_CREDENTIALS_PATH)
+# Create the credentials file dynamically
+GOOGLE_CREDENTIALS_JSON = os.getenv('GOOGLE_CREDENTIALS_JSON')
+if GOOGLE_CREDENTIALS_JSON:
+    credentials_path = BASE_DIR / 'google_credentials.json'
+    with open(credentials_path, 'w') as f:
+        f.write(GOOGLE_CREDENTIALS_JSON)
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = str(credentials_path)
 
 ALLOWED_HOSTS = []
 
