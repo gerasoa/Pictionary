@@ -175,4 +175,6 @@ credentials/
 .env
 
 # Custom
-poc-pictionary-bd78dede8783.json
+poc-pictionary-ace3dfb72677.json
+google_credentials.json
+google_credencial.json
