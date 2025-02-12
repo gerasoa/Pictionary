@@ -28,9 +28,6 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-# GOOGLE_APPLICATION_CREDENTIALS_PATH = BASE_DIR / config('GOOGLE_APPLICATION_CREDENTIALS')
-
-# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = str(GOOGLE_APPLICATION_CREDENTIALS_PATH)
 # Create the credentials file dynamically
 GOOGLE_CREDENTIALS_JSON = config('GOOGLE_CREDENTIALS_JSON', default=None)
 if GOOGLE_CREDENTIALS_JSON:
