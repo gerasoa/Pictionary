@@ -1,1 +1,1 @@
-web: gunicorn vision_poc.wsgi --log-file -
+web: gunicorn vision_poc.vision_poc.wsgi
