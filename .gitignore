@@ -173,3 +173,4 @@ cython_debug/
 # Google API keys
 poc-pictionary-e2f4925bcba0.json
 echo "../credentials/" >> .gitignore
+.env
