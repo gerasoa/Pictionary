@@ -173,3 +173,6 @@ cython_debug/
 # Google API keys
 credentials/
 .env
+
+# Custom
+poc-pictionary-bd78dede8783.json
