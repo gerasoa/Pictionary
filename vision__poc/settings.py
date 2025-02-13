@@ -62,7 +62,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'vision_poc.urls'
+ROOT_URLCONF = 'vision__poc.urls'
 
 TEMPLATES = [
     {
@@ -80,7 +80,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'vision_poc.wsgi.application'
+WSGI_APPLICATION = 'vision__poc.wsgi.application'
 
 
 # Database
