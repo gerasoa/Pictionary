@@ -36,7 +36,7 @@ if GOOGLE_CREDENTIALS_JSON:
         f.write(GOOGLE_CREDENTIALS_JSON)
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = str(credentials_path)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['poc-pictionary-v2-6458ad015e7d.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
