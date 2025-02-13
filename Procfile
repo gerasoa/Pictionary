@@ -1,1 +1,1 @@
-web: gunicorn vision_poc.vision_poc.wsgi
+web: gunicorn vision__poc.wsgi
